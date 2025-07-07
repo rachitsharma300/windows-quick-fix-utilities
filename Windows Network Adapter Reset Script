@@ -1,0 +1,16 @@
+@echo off
+echo Resetting Network Adapters...
+
+:: ========================================================
+:: Batch Script for Network Adapter Reset
+:: Code by: Rachit Sharma
+:: ========================================================
+
+netsh interface set interface "Wi-Fi" admin=disabled
+netsh interface set interface "Wi-Fi" admin=enabled
+
+netsh interface set interface "Ethernet" admin=disabled
+netsh interface set interface "Ethernet" admin=enabled
+
+echo Network adapters reset successfully.
+pause
