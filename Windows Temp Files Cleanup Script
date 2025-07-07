@@ -1,0 +1,13 @@
+@echo off
+echo Cleaning temporary files...
+
+:: ========================================================
+:: Batch Script for Cleaning Temp Files
+:: Code by: Rachit Sharma
+:: ========================================================
+
+del /s /q %temp%\*
+rd /s /q %temp%
+
+echo Temporary files cleaned.
+pause
