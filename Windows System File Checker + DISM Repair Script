@@ -1,0 +1,21 @@
+@echo off
+echo Starting System Repair...
+
+:: ========================================================
+:: Batch Script for System File Checker + DISM Repair
+:: Code by: Rachit Sharma
+:: ========================================================
+
+:: Run DISM to repair Windows image
+echo Running DISM scanhealth...
+DISM /Online /Cleanup-Image /ScanHealth
+
+echo Running DISM restorehealth...
+DISM /Online /Cleanup-Image /RestoreHealth
+
+:: Run System File Checker
+echo Running System File Checker...
+sfc /scannow
+
+echo System repair completed.
+pause
