@@ -1,0 +1,15 @@
+@echo off
+echo Starting Disk Cleanup...
+
+:: ========================================================
+:: Batch Script for Disk Cleanup & Prefetch Clear
+:: Code by: Rachit Sharma
+:: ========================================================
+
+cleanmgr /sagerun:1
+
+echo Deleting prefetch files...
+del C:\Windows\Prefetch\*.* /s /q
+
+echo Disk cleanup complete.
+pause
